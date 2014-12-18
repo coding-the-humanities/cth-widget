@@ -1,0 +1,66 @@
+<! DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="mockupstyle.css">
+    <link href="css/vendor/bootstrap.min.css" rel="stylesheet">
+    <link rel='stylesheet' href='http://codepen.io/assets/libs/fullpage/jquery-ui.css'>
+    <link href="css/flat-ui.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+  <div id="widget">
+    <ul class="left-menu">
+      <li><a class="title">{{ title }}</a></li>
+      <li><a class="level">Level {{ level }}</a></li>
+      <li><a>Technologies</a>
+        <ul>
+          <li><a class="technologies">{{ technologies }}</a></li>
+        </ul>
+      </li>
+      <li><a class="summary">{{ description.summary }} > </a>
+        <ul>
+          <a class="full">
+            <p>
+            {{ description.full }}
+            </p>
+          </a>
+        </ul>
+      </li>
+      <li><a>Tasks</a>
+        <ul>
+          <li class="task">
+            <a class="title">{{ tasks[0].title }}</a>
+            <ul>
+              <li>
+                <a class="description"><p>
+                  {{ tasks[0].description }}
+                </p></a>
+              </li>
+              <li>
+                <a>Instructions</a>
+                <ul class="instructions">
+                  <li><a>{{ instructions[0] }}</a></li>
+                  <li><a>{{ instructions[1] }}</a></li>
+                  <li><a>{{ instructions[2] }}</a></li>
+                </ul>
+              </li>
+              <li>
+                <a>Resources</a>
+                <ul class="resources">
+                  <li><a class="title">{{ resources[0].title }}</a></li>
+                  <li><a class="type">{{ resources[0].type }}</a></li>
+                  <li><a class="link" href="{{ resources[0].url }}">{{ resources[0].site.name }}</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+    <script src='http://codepen.io/assets/libs/fullpage/jquery_and_jqueryui.js'></script>
+    <script type="text/javascript" src="collapse.js"></script>
+</body>
+</html>
