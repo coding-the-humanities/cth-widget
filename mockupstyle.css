@@ -1,11 +1,4 @@
-body {
 
-}
-
-#widget {
-  margin-right:   200px;
-  margin-left:    200px;
-}
 
 .title {}
 .technologies {}
@@ -24,16 +17,16 @@ ul.left-menu a:link,
 ul.left-menu a:visited,
 ul.left-menu a {
   text-decoration: none;
-  color: #444;
+  color: #fff;
 }     
 
 ul.left-menu {
   border-left: solid 5px;
-  background: #efefef; 
+  background: #88e2cc; 
   border-radius: 5px;
   list-style: none;
   padding-left: 0; 
-  width: 700px;
+  width: 400px;
 }
 
 ul.left-menu ul {
