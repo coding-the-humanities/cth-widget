@@ -1,25 +1,59 @@
 var widget = document.getElementById('widget');
-var leftMenu = document.createElement('ul');
-leftMenu.setAttribute("class", "left-menu");
 
-function addItem(content, tag){
+/*Should probably be replaced with the thing that queries the API or whatever*/
+var elements;
+
+/*Add an item to the Supreme List of Everything, also known as the widget*/
+function addItem(list, content, tag, clicker){
   var item = document.createElement('li');
   var anchor = document.createElement('a');
+  
   if(tag) {
     anchor.setAttribute("class", tag);
   }
+
   anchor.innerHTML += content;
+
+  if (clicker){
+    var clicker = document.createElement('span');
+    clicker.setAttribute("class", "klikding");
+    clicker.innerHTML = ">>";
+    anchor.appendChild(clicker);
+  }
+
   item.appendChild(anchor);
-  leftMenu.appendChild(item);
+  list.appendChild(item);
 }
 
-/*Should probably be replaced with the thing that queries the API or whatever*/
-var elements = ["title", "description", "link"];
+/*Makes a new list*/
+function addList(place, items, tag) {
+  var list = document.createElement('ul');
 
-/*Guess this is okay, though*/
-for (element in elements) {
-  addItem(elements[element], elements[element]);
+  if (tag) {
+    list.setAttribute("class", tag);
+  }
+
+  for (item in items) {
+    addItem(list, item[0], item[1], item[2]);
+  }
+
+  place.appendChild(list);
 }
 
-widget.appendChild(leftMenu);
+/*Adds a script to the widget*/
+function addScript(file) {
+  script = document.createElement('script');
+  script.setAttribute("src", file);
+  widget.appendChild(script);
+}
+
+/*Adds style to the widget*/
+function addStyle(file) {
+  style = document.createElement('link');
+  style.setAttribute("rel", "stylesheet");
+  style.setAttribute("href", file);
+  widget.appendChild(style);
+}
+
+addList(widget, leftMenu, leftMenu);
 console.log(widget);
