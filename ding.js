@@ -11,16 +11,12 @@ function addItem(content, tag){
   anchor.innerHTML += content;
   item.appendChild(anchor);
   leftMenu.appendChild(item);
-
-/* Left For Debugging Purposes
-  console.log(content);
-  console.log(item);
-  console.log(anchor);
-  console.log(leftMenu);*/
 }
 
+/*Should probably be replaced with the thing that queries the API or whatever*/
 var elements = ["title", "description", "link"];
 
+/*Guess this is okay, though*/
 for (element in elements) {
   addItem(elements[element], elements[element]);
 }
