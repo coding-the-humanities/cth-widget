@@ -7,22 +7,57 @@
     <link rel='stylesheet' href='http://codepen.io/assets/libs/fullpage/jquery-ui.css'>
     <link href="css/flat-ui.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
+    <style>
+    .newlist li {
+      display: inline-block;
+      background: #A6A6A6;
+      font-size: 12px;
+      border-radius: 8px;
+    }
+    .newlist {
+      margin-left: 10px;
+    }
+    .newlist .nostyle {
+      display: inline-block;
+      background: none;
+      font-size: 18px;
+      margin-left: -10px;
+    }
+    h3 {
+      color: white;
+    }
+    h4 {
+      font-size: 18px;
+    }
+    ul li a {
+      color: #D7D7D7;
+    }
+    hr {
+  border: none;
+  border-top: 1px dotted #A6A6A6;
+  height: 1px;
+  width:95%;
+  margin-top: -18px;
+}
+  .klikding {
+    color: #A6A6A6;
+  }
+  </style>
 </head>
 <body>
   <div id="widget">
     <ul class="left-menu theme1">
       <li><a><h3>Combining APIs</h3></a></li>
-      <li><a>Technologies</a>
-        <ul>
-          <li><a>- Javascript</a></li>
-          <li><a>- HTML</a></li>
-          <li><a>- AJAX</a></li>
-          <li><a>- APIs</a></li>
-          <li><a>- Polymer</a></li>
+        <ul class="newlist">
+          <li><a>Javascript</a></li>
+          <li><a>HTML</a></li>
+          <li><a>AJAX</a></li>
+          <li><a>APIs</a></li>
+          <li><a>Polymer</a></li>
         </ul>
       </li>
       <li>
-            <a>Resources</a>
+            <a>Resources <span class="klikding">>></span></a>
             <ul>
               
               <li>
