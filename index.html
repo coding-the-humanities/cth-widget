@@ -2,19 +2,100 @@
 <html>
 
   <head>
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <!-- <script src="script.js"></script> -->
+      <link rel="stylesheet" href="widget.css"/>
+
+      <style>
+      /* Enkel voor deze pagina */
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .firstPart {
+        width: 50%;
+        height: 1000px;
+        float: left;
+        background: rgb(239, 239, 239);
+        padding-top: 30px;
+        border-right: 1px solid #EDEDED;
+      }
+      #unacWidget {
+        margin: 0 auto;
+      }
+      .secondPart {
+        width: 49.5%;
+        height: 1000px;
+        float: left;
+        text-align: center;
+        padding-top: 30px;
+      }
+      h2 {
+        font-family: NittiLight;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #333;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      </style>
   </head>
 
   <body>
-    <h1>Hello Plunker!</h1>
-    <div id="widget"></div>
-    <script>
-      var s = document.createElement('script'); 
-      s.src = "ding.js";
-      s.async = true;
-      document.getElementById('widget').appendChild(s);
-    </script>
+
+  <div class="firstPart">
+  <h2>HTML</h2>
+
+    <!-- UNACADEMIC WIDGET -->
+    <div id="unacWidget">
+      <h3 contenteditable="true">Variables</h3>
+      
+      <div class="bgElement"></div>
+      <ul class="ulOverview">
+        <li>
+          <span class="amountTasks" contenteditable="true">3</span>
+        </li>
+        <li>easy</li>
+        <li>
+          <div>
+          <span class="playIcon"></span>
+          <span class="amountVideo" contenteditable="true">3</span>
+          </div>
+        </li>
+        <li></li>
+      </ul>
+      
+      <ul class="pointTasks">
+        <li>
+          <h4>Get to know variables</h4>
+          <div>
+          <span class="taskRating">3<span class="maxRating">/5</span></span>
+          <span class="taskTime">33 min</span>
+          </div>
+        </li>
+        <li>
+          <h4>Learn about scope</h4>
+          <div>
+          <span class="taskRating">1<span class="maxRating">/5</span></span>
+          <span class="taskTime">12 min</span>
+          </div>
+        </li>
+        <li>
+          <h4>Meet Var and Let</h4>
+          <div>
+          <span class="taskRating">5<span class="maxRating">/5</span></span>
+          <span class="taskTime">50 min</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!-- /UNACADEMIC WIDGET -->
+
+    </div>
+
+    <div class="secondPart">
+    <h2>Illustrator mockup</h2>
+
+    <img style="width: 300px" src="mockup.svg"/>
+    </div>
   </body>
 
 </html>

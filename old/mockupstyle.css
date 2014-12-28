@@ -21,7 +21,7 @@ ul.left-menu a {
 }     
 
 ul.left-menu {
-  border-left: solid 5px;
+  border-left: solid 19px;
   background: #88e2cc; 
   border-radius: 5px;
   list-style: none;
@@ -76,7 +76,6 @@ ul.left-menu li:last-child {
   display: inline-block;
   background: none;
   font-size: 18px;
-  margin-left: -10px;
 }
 
 h3 {
@@ -89,6 +88,8 @@ h4 {
 
 ul li a {
   color: #D7D7D7;
+  line-height: 18px;
+font-size: 14px;
 }
 
 hr {
