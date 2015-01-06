@@ -30,7 +30,7 @@
         <ul class="pointTasks">
           {{#each tasks}}
             <li>
-              <h4>{{ title }}</h4>
+              <a href="{{ link }}"><h4>{{ title }}</h4></a>
               <div>
               <span class="taskRating">{{ rating }}<span class="maxRating">/5</span></span>
               <span class="taskTime">{{ duration }} min</span>
