@@ -11,6 +11,7 @@
       border: 3px solid #666;
       border-radius: 15px;
       background: white;
+      overflow: hidden;
     }
     #unacWidget h3 {
       font-family: NittiBold;
@@ -93,9 +94,11 @@
       padding-left: 20px;
       margin-top: -3px;
       padding-top: 3px;
+      width: 100%;
     }
     .pointTasks li:last-child {
       border-bottom: none;
+      margin-bottom: -3px;
     }
     .pointTasks li h4 {
       width: 65%;
@@ -105,6 +108,7 @@
     .pointTasks li div {
       float: left;
       margin-top: 5px;
+      margin-left: -5px;
     }
     .pointTasks li .taskRating {
       border-radius: 100px;
