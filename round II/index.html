@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+      <link rel="stylesheet" href="widget.css"/>
+
+      <style>
+
+      </style>
+  </head>
+
+  <body>
+
+  <div class="firstPart">
+  <h2>HTML</h2>
+
+    <!-- UNACADEMIC WIDGET -->
+    <div id="unacWidget">
+      <script id="entry-template" type="text/x-handlebars-template">
+
+      <h3 contenteditable="true">{{ point.title }}</h3>
+      
+      <div class="bgElement"></div>
+      <ul class="ulOverview">
+        <li>
+          <span class="amountTasks" contenteditable="true">3</span>
+        </li>
+        <li>easy</li>
+        <li>
+          <div>
+          <span class="playIcon"></span>
+          <span class="amountVideo" contenteditable="true">3</span>
+          </div>
+        </li>
+        <li></li>
+      </ul>
+      
+      <ul class="pointTasks">
+        <li>
+          <h4>Get to know variables</h4>
+          <div>
+          <span class="taskRating">3<span class="maxRating">/5</span></span>
+          <span class="taskTime">33 min</span>
+          </div>
+        </li>
+        <li>
+          <h4>Learn about scope</h4>
+          <div>
+          <span class="taskRating">1<span class="maxRating">/5</span></span>
+          <span class="taskTime">12 min</span>
+          </div>
+        </li>
+        <li>
+          <h4>Meet Var and Let</h4>
+          <div>
+          <span class="taskRating">{{ }}5<span class="maxRating">/5</span></span>
+          <span class="taskTime">50 min</span>
+          </div>
+        </li>
+      </ul>
+  </script>
+    </div>
+    <!-- /UNACADEMIC WIDGET -->
+
+    </div>
+<script type="text/javascript" src="handlebars-v2.0.0.js"></script>
+ <script> 
+
+var source   = $("#entry-template").html();
+var template = Handlebars.compile(source);
+ var content = {
+      points: {
+      title: "Variables",
+      number: 3,
+      difficulty: "easy",
+      videos: 3
+      },
+      tasks: [
+        {
+          title: "Get to know variables",
+          rating: 3,
+          duration: 50
+        },
+        {
+          title: "Learn about scope",
+          rating: 4,
+          duration: 5
+        },
+        {
+          title: "Meet Var and Let",
+          rating: 2,
+          duration: 12
+        }
+      ]
+};
+var html    = template(content);
+
+ </script>
+  </body>
+
+</html>
