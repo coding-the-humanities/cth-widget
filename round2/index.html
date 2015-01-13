@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="widget.css"/>
     <script type="text/javascript" src="handlebars-v2.0.0.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.js"></script>
+    <script type="text/javascript" src="http://requirejs.org/docs/release/2.1.15/minified/require.js"></script>
   </head>
 
   <body>
@@ -11,7 +12,7 @@
       <!-- UNACADEMIC WIDGET -->
       <div id="unacWidget">
         <script id="some-template" type="text/x-handlebars-template">
-        <h3>{{ points.title }}</h3>
+        <h3>{{ title }}</h3>
         <div class="bgElement"></div>
         <ul class="ulOverview">
           <li>
@@ -28,7 +29,7 @@
         </ul>
         
         <ul class="pointTasks">
-          {{#each tasks}}
+          {{#each waypoints}}
             <li>
               <a href="{{ link }}"><h4>{{ title }}</h4></a>
               <div>
@@ -43,35 +44,21 @@
       <!-- /UNACADEMIC WIDGET -->
     </div>
 
-  <script> 
+  <script>
     var source   = $("#some-template").html();
     var template = Handlebars.compile(source);
-    var content = {
-        points: {
-          title: "Variables",
-          number: 3,
-          difficulty: "easy",
-          videos: 3
-        },
-        tasks: [
-          {
-            title: "Get to know variables",
-            rating: 3,
-            duration: 50
-          },
-          {
-            title: "Learn about scope",
-            rating: 4,
-            duration: 5
-          },
-          {
-            title: "Meet Var and Let",
-            rating: 2,
-            duration: 12
-          }
-        ]
-      };
-    $('#unacWidget').append(template(content));
+    var url = "http://private-a523e-unacademic.apiary-mock.com/paths/123123";
+    var content;
+
+    var query = $.ajax({
+      url: url,
+      dataType: "json",
+      }).done(function (obj) {
+        content = obj;
+        console.log(content);
+        $('#unacWidget').append(template(content));
+      });
+
   </script>
   </body>
 </html>
